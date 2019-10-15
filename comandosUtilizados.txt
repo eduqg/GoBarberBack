@@ -28,3 +28,65 @@ no arquivo launch.json
 
 Iniciar aplicação com yarn dev:debug e colocar breackpoints desejados.
 
+-> Docker CE
+Fazer a instalação
+docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+
+docker ps = para ver containers
+docker ps -a = para ver todos
+docker stop database (ou o id)
+docker start database
+docker logs database
+
+Outros comandos:
+docker stop $(docker ps -a -q) = para containers
+docker rm $(docker ps -a -q) = remove containers
+sudo service postgresql stop = para postgres do pc
+sudo service postgresql start = inicia postgres do pc
+
+
+// Tive que usar https://discuss.circleci.com/t/listen-tcp-0-0-0-0-5432-bind-address-already-in-use/6084/4
+// - sudo service postgresql stop
+// - while lsof -Pi :5432 -sTCP:LISTEN -t; do sleep 1; done
+
+Portanto:
+
+Por ter postgres para outro projeto, deixar porta 5432 para ele.
+Usar a porta 5433 para o GoBarber.
+
+-> Postbird
+Para visualizar dados do postgres
+
+Host  
+localhost
+
+Port  
+5433
+
+Username  
+postgres
+
+Password
+docker
+
+-> yarn add eslint
+
+? How would you like to use ESLint? To check syntax, find problems, and enforce code style
+? What type of modules does your project use? JavaScript modules (import/export)
+? Which framework does your project use? None of these
+? Does your project use TypeScript? No
+? Where does your code run? Node
+? How would you like to define a style for your project? Use a popular style guide
+? Which style guide do you want to follow? Airbnb (https://github.com/airbnb/javascript)
+? What format do you want your config file to be in? JavaScript
+Checking peerDependencies of eslint-config-airbnb-base@latest
+The config that you've selected requires the following dependencies:
+
+eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.1.0 eslint-plugin-import@^2.18.2
+? Would you like to install them now with npm? Yes
+
+Excluir package.lock.json
+yarn install
+
+-> 
