@@ -58,13 +58,13 @@ Usar a porta 5433 para o GoBarber.
 -> Postbird
 Para visualizar dados do postgres
 
-Host  
+Host
 localhost
 
-Port  
+Port
 5433
 
-Username  
+Username
 postgres
 
 Password
@@ -89,4 +89,15 @@ eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.1.0 eslint-plugin-import@^
 Excluir package.lock.json
 yarn install
 
--> 
+yarn eslint --fix src --ext .js = para arrumar tudo em uma pasta
+
+-> Prettier
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+Integrado ao ESLint
+Tamanho de linhas
+
+-> Extensao editorconfig
+Instalar pelo VSCode
+Para diferentes editores de texto entre desenvolvedores
+Configura para padronizar
