@@ -21,4 +21,10 @@ import express from 'express';
 -> Sucrase + Nodemon
 
 Criar na pasta raiz nodemon.json. Quero que rode o node para cada arquivo js
-mas reqistre o sucrase. Antes de iniciar vai executar sucrase/register
+mas reqistre o sucrase. Antes de iniciar vai executar sucrase/register.
+
+Iniciar configurações de debug clicando no 'inseto', add configuration e fazer alterações
+no arquivo launch.json
+
+Iniciar aplicação com yarn dev:debug e colocar breackpoints desejados.
+
