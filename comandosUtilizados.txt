@@ -1,0 +1,24 @@
+-> yarn init -y
+
+-> yarn add nodemon -D
+Em package.json adicionar
+"scripts": {
+  "dev":"nodemon src/server.js"
+}
+
+-> yarn add sucrase -D
+
+yarn sucrase-node src/server.js
+
+Para trocar modo de importação de:
+
+const express = require('express');
+
+Para:
+
+import express from 'express';
+
+-> Sucrase + Nodemon
+
+Criar na pasta raiz nodemon.json. Quero que rode o node para cada arquivo js
+mas reqistre o sucrase. Antes de iniciar vai executar sucrase/register
