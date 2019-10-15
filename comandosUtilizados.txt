@@ -31,7 +31,7 @@ Iniciar aplicação com yarn dev:debug e colocar breackpoints desejados.
 -> Docker CE
 Fazer a instalação
 docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
-
+docker run --name database -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres:11
 
 docker ps = para ver containers
 docker ps -a = para ver todos
@@ -102,13 +102,19 @@ Instalar pelo VSCode
 Para diferentes editores de texto entre desenvolvedores
 Configura para padronizar
 
--> yarn add sequelize
-Para integração com postgres
-
--> yarn add sequelize-cli -D
-Para ter comandos do sequelize
-
 -> yarn add pg pg-hstore
 Para usar postgres
 
-->
+-> Sequelize
+
+yarn add sequelize = para integração com postgres
+
+yarn add sequelize-cli -D = Para ter comandos do sequelize
+
+yarn sequelize migration:create --name=create-users = Para criar migração inicial
+
+yarn sequelize db:migrate = Para realizar migrações
+
+yarn sequelize db:migrate:undo = rollback
+
+yarn sequelize db:migrate:undo:all
