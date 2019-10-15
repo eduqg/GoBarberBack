@@ -101,3 +101,14 @@ Tamanho de linhas
 Instalar pelo VSCode
 Para diferentes editores de texto entre desenvolvedores
 Configura para padronizar
+
+-> yarn add sequelize
+Para integração com postgres
+
+-> yarn add sequelize-cli -D
+Para ter comandos do sequelize
+
+-> yarn add pg pg-hstore
+Para usar postgres
+
+->
