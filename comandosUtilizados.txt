@@ -118,3 +118,6 @@ yarn sequelize db:migrate = Para realizar migrações
 yarn sequelize db:migrate:undo = rollback
 
 yarn sequelize db:migrate:undo:all
+
+-> yarn add yup
+para validação de campos
