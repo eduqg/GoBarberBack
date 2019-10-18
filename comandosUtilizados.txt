@@ -129,3 +129,8 @@ Para lidar com multpart form data
 
 -> yarn add date-fns@next
 Ultima versão da lid de dadas
+
+-> Configurando mongodb
+
+docker run --name mongobarber -p 27017:27017 -d -t mongo
+yarn add mongoose
