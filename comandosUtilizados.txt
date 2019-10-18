@@ -138,3 +138,6 @@ yarn add mongoose
 Para abrir o mongodb compass, apenas clicar em ok. Não configuramos senha.
 
 -> yarn add nodemailer
+
+-> yarn add express-handlebars nodemailer-express-handlebars
+Para templates de html. Podemos inserir variáveis do node
