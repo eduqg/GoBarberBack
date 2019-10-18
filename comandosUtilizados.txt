@@ -134,3 +134,5 @@ Ultima versão da lid de dadas
 
 docker run --name mongobarber -p 27017:27017 -d -t mongo
 yarn add mongoose
+
+Para abrir o mongodb compass, apenas clicar em ok. Não configuramos senha.
