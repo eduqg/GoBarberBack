@@ -45,11 +45,6 @@ docker rm $(docker ps -a -q) = remove containers
 sudo service postgresql stop = para postgres do pc
 sudo service postgresql start = inicia postgres do pc
 
-
-// Tive que usar https://discuss.circleci.com/t/listen-tcp-0-0-0-0-5432-bind-address-already-in-use/6084/4
-// - sudo service postgresql stop
-// - while lsof -Pi :5432 -sTCP:LISTEN -t; do sleep 1; done
-
 Portanto:
 
 Por ter postgres para outro projeto, deixar porta 5432 para ele.
@@ -70,7 +65,9 @@ postgres
 Password
 docker
 
--> yarn add eslint
+-> yarn add eslint -Docker
+
+yarn eslint --init
 
 ? How would you like to use ESLint? To check syntax, find problems, and enforce code style
 ? What type of modules does your project use? JavaScript modules (import/export)
@@ -81,7 +78,7 @@ docker
 ? Which style guide do you want to follow? Airbnb (https://github.com/airbnb/javascript)
 ? What format do you want your config file to be in? JavaScript
 Checking peerDependencies of eslint-config-airbnb-base@latest
-The config that you've selected requires the following dependencies:
+The config that you ve selected requires the following dependencies:
 
 eslint-config-airbnb-base@latest eslint@^5.16.0 || ^6.1.0 eslint-plugin-import@^2.18.2
 ? Would you like to install them now with npm? Yes
@@ -119,5 +116,13 @@ yarn sequelize db:migrate:undo = rollback
 
 yarn sequelize db:migrate:undo:all
 
+-> yarn add jsonwebtoken
+
+-> yarn add bcryptjs
+Para senha com hash
+
 -> yarn add yup
 para validação de campos
+
+-> yarn add multer
+Para lidar com multpart form data

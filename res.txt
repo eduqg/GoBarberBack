@@ -1,0 +1,95 @@
+commit 8c3859f4092e17c868307d4a9f63fe6bbc01deda
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 22:33:46 2019 -0300
+
+    Validations with Yup
+
+commit f1607c55729c4f36808ca5c296c07f1abc9e01d2
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 22:13:34 2019 -0300
+
+    Updating user
+
+commit 720d4ef18fba3764363154c755930631e8dca5d9
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 21:57:50 2019 -0300
+
+    Middleware to check if user are logged
+
+commit 08e4a1ef57228fa193ad4f9d79d7397ab4e195d9
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 21:35:29 2019 -0300
+
+    Refactoring secret auth variables
+
+commit bd7228ceeb72d6db43e956081ddacc6cf9ab3eb6
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 21:32:09 2019 -0300
+
+    Generating jwt
+
+commit 6b5c75556f9c0c5c92f0382382537df676e9598b
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 21:14:40 2019 -0300
+
+    Hash to password
+
+commit 7012e7d48d99d6f5e9352fb1879462e614913da4
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 20:57:10 2019 -0300
+
+    User controller to post one user
+
+commit 8bdb457673e71bfae2c44ee77c578c6e3b2ae1ac
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 19:59:26 2019 -0300
+
+    Configuring first route of User to insert on database
+
+commit 062876bdb64c89ccf0543408269b2e20b6195e7c
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 19:42:43 2019 -0300
+
+    Sequelize first migration
+
+commit 6e8219baee0ca079f180518fd1744e5a48f26f8a
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 17:58:54 2019 -0300
+
+    Configuring sequelize
+
+commit 560c0576fe79158decbb2f0f141820b411b84ab6
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 17:11:07 2019 -0300
+
+    Prettier and editorconfig
+
+commit f5236dc23af41917bb2b466e3e169637f6d064e8
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 17:02:08 2019 -0300
+
+    Docker and ESLint
+
+commit 12bde2aaf3dab974488a6436a3a27019708f2e66
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 11:42:25 2019 -0300
+
+    Configuring debug to vscode
+
+commit ab74b49c2b18cea62dc9c483de5f6a071d165081
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 11:35:10 2019 -0300
+
+    Configuring sucrase + nodemon to run server
+
+commit 7874338c74f0e1184077b6429243b6ffecd5c12e
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 11:26:16 2019 -0300
+
+    New server structure with class
+
+commit 004132e5feef7ba60103e8b402e6fd480b58555d
+Author: eduqg <eduardoqgomes@gmail.com>
+Date:   Tue Oct 15 11:14:29 2019 -0300
+
+    Initial folder structure]

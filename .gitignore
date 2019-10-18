@@ -80,7 +80,7 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# react / gatsby 
+# react / gatsby
 public/
 
 # vuepress build output
@@ -127,3 +127,8 @@ tags
 .history
 
 # End of https://www.gitignore.io/api/vim,node,visualstudiocode
+
+tmp/uploads/*.png
+tmp/uploads/*.jpg
+tmp/uploads/*.jpeg
+!tmp/uploads/.emtpy
