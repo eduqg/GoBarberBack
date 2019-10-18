@@ -126,3 +126,6 @@ para validação de campos
 
 -> yarn add multer
 Para lidar com multpart form data
+
+-> yarn add date-fns@next
+Ultima versão da lid de dadas
