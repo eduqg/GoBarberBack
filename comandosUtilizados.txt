@@ -153,3 +153,13 @@ keu tem mais funcionalidades, mas é mais devagar.
 
 -> new Date().getTime()
 no console do chrome para conseguir tempo no UnixTimestamp
+
+-> sentry ou bugsnack
+yarn add @sentry/node@5.7.1
+
+-> yarn add express-async-errors
+Express por padrão não envia erros de async
+Instalar extensão
+
+-> yarn add youch
+Trata erros para ficar com uma melhor visualização.
