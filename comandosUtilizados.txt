@@ -141,3 +141,12 @@ Para abrir o mongodb compass, apenas clicar em ok. Não configuramos senha.
 
 -> yarn add express-handlebars nodemailer-express-handlebars
 Para templates de html. Podemos inserir variáveis do node
+
+-> docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+Para açoes que levam mais tempo e queremos ter controle. Envio de email.
+Usar background jobs, trabalhos em segundo plano.
+Preciso de um banco não relacional. Redis é apenas com chave e valor, sem preciar de schema.
+
+-> yarn add bee-queue
+Bee queue, ferramenta de fila de trabalhos em segundo plano.
+keu tem mais funcionalidades, mas é mais devagar.
