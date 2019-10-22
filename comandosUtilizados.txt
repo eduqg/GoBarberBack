@@ -151,6 +151,8 @@ Preciso de um banco não relacional. Redis é apenas com chave e valor, sem prec
 Bee queue, ferramenta de fila de trabalhos em segundo plano.
 keu tem mais funcionalidades, mas é mais devagar.
 
+-> yarn add date-fns@next
+
 -> new Date().getTime()
 no console do chrome para conseguir tempo no UnixTimestamp
 
