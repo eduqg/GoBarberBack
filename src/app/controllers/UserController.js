@@ -5,22 +5,6 @@ import File from '../models/File';
 
 class UserController {
   async store(req, res) {
-    // Defino como que quero meu objeto
-    const schema = Yup.object().shape({
-      name: Yup.string().required(),
-      email: Yup.string()
-        .email()
-        .required(),
-      password: Yup.string()
-        .required()
-        .min(6),
-    });
-
-    // Verifico campos
-    if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation Fails.' });
-    }
-
     const userExists = await User.findOne({ where: { email: req.body.email } });
 
     // Caso seja usuário duplicado

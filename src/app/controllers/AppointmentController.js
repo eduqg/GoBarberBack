@@ -18,7 +18,7 @@ class AppointmentController {
     const appointment = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
-      attributes: ['id', 'date', 'past','cancelable'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       limit: 20,
       offset: (page - 1) * 20,
       include: [
@@ -31,10 +31,10 @@ class AppointmentController {
               model: File,
               as: 'avatar',
               attributes: ['id', 'path', 'url'],
-            }
-          ]
-        }
-      ]
+            },
+          ],
+        },
+      ],
     });
 
     return res.json(appointment);
@@ -59,7 +59,9 @@ class AppointmentController {
 
     if (!isProvider) {
       // 401 = Não autorizado
-      return res.status(401).json({ error: 'You can only create appointments with providers' });
+      return res
+        .status(401)
+        .json({ error: 'You can only create appointments with providers' });
     }
 
     // Verifica datas passadas
@@ -85,7 +87,9 @@ class AppointmentController {
     }
 
     if (provider_id === req.userId) {
-      return res.status(400).json({ error: 'Appointment cannot be made to yourself' });
+      return res
+        .status(400)
+        .json({ error: 'Appointment cannot be made to yourself' });
     }
 
     const appointment = await Appointment.create({
@@ -122,8 +126,8 @@ class AppointmentController {
           model: User,
           as: 'user',
           attributes: ['name'],
-        }
-      ]
+        },
+      ],
     });
 
     if (appointment.user_id !== req.userId) {
