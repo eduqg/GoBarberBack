@@ -11,12 +11,16 @@ class NotificationController {
     // Somente provedores de serviços podem carregar notificações
     if (!checkIsProvider) {
       // 401 = Não autorizado
-      return res.status(401).json({ error: 'Only provider can load notifications' });
+      return res
+        .status(401)
+        .json({ error: 'Only provider can load notifications' });
     }
 
     const notifications = await Notification.find({
       user: req.userId,
-    }).sort({ createdAt: 'desc' }).limit(20);
+    })
+      .sort({ createdAt: 'desc' })
+      .limit(20);
 
     return res.json(notifications);
   }
