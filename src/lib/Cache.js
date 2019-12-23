@@ -26,6 +26,16 @@ class Cache {
   invalidate(key) {
     return this.redis.del(key);
   }
+
+  // Invalida todas as chaves com um prefixo
+  async invalidatePrefix(prefix) {
+    const keys = await this.redis.keys(`cache:${prefix}:*`);
+
+    // Para deletar devem estar sem o prefix
+    const keysWithoutPrefix = keys.map(key => key.replace('cache:', ''));
+
+    return this.redis.del(keysWithoutPrefix);
+  }
 }
 
 export default new Cache();
