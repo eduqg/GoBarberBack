@@ -170,3 +170,11 @@ Trata erros para ficar com uma melhor visualização.
 yarn add dotenv
 Primeira linha do app.js = import 'dotenv/config';
 É possível acessar variáveis de ambiente com process.env.DB_HOST
+
+-> Client de redis
+
+Possui promises integradas.
+
+```console
+yarn add ioredis
+```

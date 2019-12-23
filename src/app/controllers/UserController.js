@@ -1,6 +1,8 @@
 import User from '../models/User';
 import File from '../models/File';
 
+import Cache from '../../lib/Cache';
+
 class UserController {
   async store(req, res) {
     const userExists = await User.findOne({ where: { email: req.body.email } });
@@ -11,6 +13,10 @@ class UserController {
     }
 
     const { id, name, email, provider } = await User.create(req.body);
+
+    if (provider) {
+      await Cache.invalidate('providers');
+    }
 
     return res.json({
       id,
@@ -41,7 +47,7 @@ class UserController {
 
     await user.update(req.body);
 
-    const { id, name, avatar } = await User.findByPk(req.userId, {
+    const { id, name, avatar, provider } = await User.findByPk(req.userId, {
       include: [
         {
           model: File,
@@ -50,6 +56,10 @@ class UserController {
         },
       ],
     });
+
+    if (provider) {
+      await Cache.invalidate('providers');
+    }
 
     return res.json({
       id,
