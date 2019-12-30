@@ -171,10 +171,22 @@ yarn add dotenv
 Primeira linha do app.js = import 'dotenv/config';
 É possível acessar variáveis de ambiente com process.env.DB_HOST
 
--> Client de redis
+-> Client de redis para Cache
 
 Possui promises integradas.
 
 ```console
 yarn add ioredis
+```
+
+-> Segurança no Node.js
+
+express-brute
+
+Limita requisições dentro de uma rota. Na autenticação tentar fazer requisições infinitas, para prevenir.
+Bloqueia por tempo progressivo.
+O redis servirá para armazenar quantas tentativas um ip fez em uma rota.
+
+```console
+yarn add express-brute express-brute-redis
 ```
