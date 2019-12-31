@@ -7,6 +7,9 @@ import Youch from 'youch';
 import * as Sentry from '@sentry/node';
 import 'express-async-errors';
 import helmet from 'helmet';
+import redis from 'redis';
+import RateLimit from 'express-rate-limit';
+import RateLimitRedis from 'rate-limit-redis';
 
 import routes from './routes';
 import sentryConfig from './config/sentry';
@@ -37,6 +40,24 @@ class App {
       '/files',
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
+
+    if (process.env.NODE_ENV !== 'development') {
+      // Armazena no redis: esse ip fez tantas requisições nessa rota
+      this.server.use(
+        new RateLimit({
+          store: new RateLimitRedis({
+            client: redis.createClient({
+              host: process.env.REDIS_HOST,
+              port: process.env.REDIS_PORT,
+            }),
+          }),
+          // Intervalo que verifico máximo de requisições
+          windowMs: 1000 * 60 * 15,
+          // máximo de requisições que quero que faça nesse tempo de 15 minutos.
+          max: 100,
+        })
+      );
+    }
   }
 
   routes() {

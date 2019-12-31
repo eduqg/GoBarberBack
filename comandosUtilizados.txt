@@ -199,3 +199,11 @@ Para habilitar proteções como crossite scripting. Faz de forma automática. Ap
 ```console
 yarn add helmet
 ```
+
+Express Rate Limit
+
+Como se fosse o express brute. Mas para todas as rotas.
+
+```console
+yarn add express-rate-limit redis rate-limit-redis
+```
