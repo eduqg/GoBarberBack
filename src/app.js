@@ -6,6 +6,7 @@ import cors from 'cors';
 import Youch from 'youch';
 import * as Sentry from '@sentry/node';
 import 'express-async-errors';
+import helmet from 'helmet';
 
 import routes from './routes';
 import sentryConfig from './config/sentry';
@@ -28,6 +29,7 @@ class App {
     // The request handler must be the first middleware on the app
     this.server.use(Sentry.Handlers.requestHandler());
     // this.server.use(cors({origin: 'http://rocketseat.com.br'}));
+    this.server.use(helmet());
     this.server.use(cors());
     this.server.use(express.json());
     // Para servir arquivos estáticos, que podem ser acessados diretamente pelo navegador

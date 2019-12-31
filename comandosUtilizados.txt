@@ -190,3 +190,12 @@ O redis servirá para armazenar quantas tentativas um ip fez em uma rota.
 ```console
 yarn add express-brute express-brute-redis
 ```
+
+Helmet
+
+Adiciona tipos de headers de segurança nas requisições.
+Para habilitar proteções como crossite scripting. Faz de forma automática. Apenas importar no app.js
+
+```console
+yarn add helmet
+```
